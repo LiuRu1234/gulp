@@ -8,7 +8,7 @@ const gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   fileinclude = require('gulp-file-include')
 
-  let dist = 'caseh5'
+  let dist = 'dist'
   
 gulp.task('delete', function (cb) {
   return del([dist+'/*', !dist+'/images', !dist+'/fonts'], cb);
@@ -80,32 +80,3 @@ gulp.task('serve', ['delete'], function () {
 
 gulp.task('default', ['serve']);
 gulp.task('build', ['babel', 'sass', 'fileinclude', 'copy']);
-
-
-
-var host = {
-        // 默认开发输出目录
-        path: 'www/',
-        // 默认源目录
-        devUrl:"src/",
-        // 设置服务端口
-        port: 8080,
-        html: 'index.html',
-        proxy:'/proxy'
-    };
-//使用connect启动一个Web服务器
-gulp.task('connect', function() {
-    connect.server({
-        root: host.path,
-        port: host.port,
-        livereload: true,
-        middleware: function (connect, opt) {
-            opt.route = host.proxy;
-            opt.changeOrigin = true;
-            opt.ws = true;
-            // opt.origin = 'localhost:9090';
-            var proxy = new Proxy(opt);
-            return [proxy];
-        }
-    });
-});
