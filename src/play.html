@@ -1,0 +1,96 @@
+@@include('./components/header.html',{"isMobile":true,"styles": ["styles/basic.css","styles/asset/swiper.min.css","styles/play.css","styles/asset/videojs.css"]})
+@@include('./components/loading.html')
+
+<div class="play_container">
+    <div class="thisplay">
+        <div class="coverMask"></div>
+        <div class="thisplayContent">
+            <div class="title"></div>
+            <div class="tips">
+                <div class="left">
+                    <div class="label_tips">#</div>
+                    <div class="label">
+                        <div class="label_text"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="biao biao1">
+                        <div id="infoeye"></div>
+                        <div>播放</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="biao">
+                        <div id="infozan"></div>
+                        <div>喜欢</div>
+                    </div>
+                </div>
+            </div>
+            <div class="play">
+                <div class="cover">
+                    <img class="pic" src="" alt=""/>
+                    <div class="play-icon">
+                        <img src="./images/play.png" alt="">
+                        <div class="time"></div>
+                    </div>
+                </div>
+                <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%" poster="">
+                    <source class="source1" src="" type='video/mp4'>
+                    <source class="source2" src="" type='video/webm'>
+                </video>
+                <!--<video id="my-video" src="" autoplay></video>-->
+            </div>
+            <div class="play_book">
+                <div class="play_book_info">
+                    <div class="avatar">
+                        <img src="" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="book"></div>
+                        <div class="business"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="play_info">
+                <div class="play_info_title">概述</div>
+                <div class="play_info_text"></div>
+            </div>
+            <div class="praise">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="other_play">
+        <div class="title">该作品集的其它视频</div>
+        <div class="play_list_box">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="end">
+            END
+        </div>
+        <div class="code_box">
+            <div class="code_title">长按识别二维码联系作者</div>
+            <div class="code">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mask" style="display: none">
+    <div class="tips">
+        <div class="tips_text">打开分享到朋友圈，让更多人看到您的案例</div>
+    </div>
+    <div class="btn" id="IKnow">
+        知道了
+    </div>
+</div>
+
+<div id="btnInfo" class="shareBtn" >
+    <img src="./images/quan.png" alt="">
+</div>
+@@include('./components/footer.html',{"scripts": ["scripts/asset/jquery.js","scripts/asset/swiper.min.js","scripts/asset/clipboard.min.js","scripts/asset/videojs.js","scripts/asset/jweixin-1.3.2.js","scripts/asset/common.js","scripts/play.js"]})

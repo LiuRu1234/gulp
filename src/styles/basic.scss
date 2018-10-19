@@ -1,0 +1,104 @@
+@import "asset/reset";
+//@import "asset/videojs.css";
+img{
+  border: 0!important;
+}
+
+.loading-page {
+  height: 100%;
+  width: 100%;
+  z-index: 100000000;
+  position: fixed;
+  background: #000;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  top: 0;
+  left: 0;
+}
+.loading-fade {
+  display: none;
+}
+.rabbit-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  width: 160px;
+  height: 160px;
+  background-size: cover;
+  text-align: center;
+  line-height: 96px;
+}
+
+
+.loadEffect{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+.loadEffect span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  //background: lightgreen;
+  background: #fff;
+  position: absolute;
+  -webkit-animation: load 1.04s ease infinite;
+}
+@-webkit-keyframes load{
+  0%{
+    -webkit-transform: scale(1.2);
+    opacity: 1;
+  }
+  100%{
+    -webkit-transform: scale(.3);
+    opacity: 0.5;
+  }
+}
+.loadEffect span:nth-child(1){
+  left: 0;
+  top: 50%;
+  margin-top:-10px;
+  -webkit-animation-delay:0.13s;
+}
+.loadEffect span:nth-child(2){
+  left: 14px;
+  top: 14px;
+  -webkit-animation-delay:0.26s;
+}
+.loadEffect span:nth-child(3){
+  left: 50%;
+  top: 0;
+  margin-left: -10px;
+  -webkit-animation-delay:0.39s;
+}
+.loadEffect span:nth-child(4){
+  top: 14px;
+  right:14px;
+  -webkit-animation-delay:0.52s;
+}
+.loadEffect span:nth-child(5){
+  right: 0;
+  top: 50%;
+  margin-top:-10px;
+  -webkit-animation-delay:0.65s;
+}
+.loadEffect span:nth-child(6){
+  right: 14px;
+  bottom:14px;
+  -webkit-animation-delay:0.78s;
+}
+.loadEffect span:nth-child(7){
+  bottom: 0;
+  left: 50%;
+  margin-left: -10px;
+  -webkit-animation-delay:0.91s;
+}
+.loadEffect span:nth-child(8){
+  bottom: 14px;
+  left: 14px;
+  -webkit-animation-delay:1.04s;
+}

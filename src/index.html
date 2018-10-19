@@ -1,0 +1,49 @@
+@@include('./components/header.html',{"isMobile":true,"styles": ["styles/basic.css","styles/index.css"]})
+@@include('./components/loading.html')
+<div class="magic-container needHeight scroll">
+    <div class="magic-inner">
+        <div class="container needHeight">
+            <div class="container_mask"></div>
+            <div class="container_content">
+                <div class="pic">
+                    <img src="" alt=""/>
+                </div>
+                <div class="title"></div>
+                <div class="business"></div>
+                <div class="count">
+                    <div class="list eye">
+                        <div class="img"></div>
+                        <div id="allsee"></div>
+                    </div>
+                    <div class="list zan">
+                        <div class="img"></div>
+                        <div id="allzan"></div>
+                    </div>
+                </div>
+                <div class="jiantou"></div>
+            </div>
+        </div>
+        <div class="list-container needHeight">
+           <div class="content">
+               <div class="list_top">
+                   <div class="list_top_scroll"></div>
+               </div>
+               <div class="list_box"></div>
+               <div class="bottom-contact">
+                   <div class="end">
+                       END
+                   </div>
+                   <div class="contant_btn">
+                       <div class="pic"></div>
+                       <div class="text">联系作者</div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+<div id="btnCase" class="shareBtn">
+    <img src="./images/quan.png" alt="">
+</div>
+<input class="copyinput" id="copyInputUrl" style="opacity: 0" readonly="readonly" value="">
+@@include('./components/footer.html',{"scripts": ["scripts/asset/jquery.js","scripts/asset/clipboard.min.js","scripts/asset/bscroll.js","scripts/asset/jweixin-1.3.2.js","scripts/asset/common.js","scripts/index.js"]})
